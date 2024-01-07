@@ -1,6 +1,6 @@
 defmodule Bob do
-  @spec hey(String.t()) :: String.t()
-  def hey(input) do
+  @spec reply(String.t()) :: String.t()
+  def reply(input) do
     input = String.trim(input)
 
     cond do
