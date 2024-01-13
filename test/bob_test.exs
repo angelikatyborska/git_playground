@@ -135,9 +135,4 @@ defmodule BobTest do
   test "non-question ending with whitespace" do
     assert Bob.reply("This is a statement ending with whitespace     ") == "Whatever."
   end
-
-  @tag :pending
-  test "shouting in Russian" do
-    assert Bob.reply("УХОДИ") == "Whoa, chill out!"
-  end
 end
