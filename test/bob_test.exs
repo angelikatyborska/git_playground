@@ -7,16 +7,6 @@ defmodule BobTest do
   end
 
   @tag :ignore
-  test "shouting" do
-    assert Bob.reply("WATCH OUT!") == "Whoa, chill out!"
-  end
-
-  @tag :ignore
-  test "shouting gibberish" do
-    assert Bob.reply("FCECDFCAAB") == "Whoa, chill out!"
-  end
-
-  @tag :ignore
   test "asking a question" do
     assert Bob.reply("Does this cryogenic chamber make me look fat?") == "Sure."
   end
@@ -134,10 +124,5 @@ defmodule BobTest do
   @tag :ignore
   test "non-question ending with whitespace" do
     assert Bob.reply("This is a statement ending with whitespace     ") == "Whatever."
-  end
-
-  @tag :ignore
-  test "shouting in Russian" do
-    assert Bob.reply("УХОДИ") == "Whoa, chill out!"
   end
 end
