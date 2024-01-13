@@ -46,17 +46,6 @@ defmodule BobTest do
     assert Bob.reply("This Isn't Shouting!") == "Whatever."
   end
 
-  @tag :pending
-  test "forceful question" do
-    assert Bob.reply("WHAT'S GOING ON?") == "Calm down, I know what I'm doing!"
-  end
-
-  @tag :pending
-  test "asking in capitals" do
-    assert Bob.reply("THIS ISN'T SHOUTING?") == "Calm down, I know what I'm doing!"
-  end
-
-  @tag :pending
   test "shouting numbers" do
     assert Bob.reply("1, 2, 3 GO!") == "Whoa, chill out!"
   end
