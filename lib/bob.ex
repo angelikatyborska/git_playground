@@ -4,17 +4,17 @@ defmodule Bob do
     input = String.trim(input)
 
     cond do
-      silent?(input) -> "Fine. Be that way!"
-      shouting_question?(input) -> "Calm down, I know what I'm doing!"
-      question?(input) -> "Sure."
-      shouting?(input) -> "Whoa, chill out!"
+      slt?(input) -> "Fine. Be that way!"
+      shq?(input) -> "Calm down, I know what I'm doing!"
+      q?(input) -> "Sure."
+      sh?(input) -> "Whoa, chill out!"
       true -> "Whatever."
     end
   end
 
-  defp silent?(input), do: "" == input
-  defp shouting?(input), do: input == String.upcase(input) && letters?(input)
-  defp question?(input), do: String.ends_with?(input, "?")
-  defp shouting_question?(input), do: shouting?(input) && question?(input)
-  defp letters?(input), do: Regex.match?(~r/\p{L}+/, input)
+  defp slt?(input), do: "" == input
+  defp sh?(input), do: input == String.upcase(input) && ltr?(input)
+  defp q?(input), do: String.ends_with?(input, "?")
+  defp shq?(input), do: sh?(input) && q?(input)
+  defp ltr?(input), do: Regex.match?(~r/\p{L}+/, input)
 end
