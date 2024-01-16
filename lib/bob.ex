@@ -16,5 +16,5 @@ defmodule Bob do
   defp sh?(input), do: input == String.upcase(input) && ltr?(input)
   defp q?(input), do: String.ends_with?(input, "?")
   defp shq?(input), do: sh?(input) && q?(input)
-  defp ltr?(input), do: Regex.match?(~r/\p{L}+/, input)
+  defp ltr?(input), do: String.upcase(input) != String.downcase(input)
 end
